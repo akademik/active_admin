@@ -20,7 +20,7 @@ module ActiveAdmin
       table_column = (@column =~ /\./) ? @column :
         [table, active_admin_config.resource_quoted_column_name(@column)].compact.join(".")
 
-      [table_column, @op, ' ', @order].compact.join
+      [@column, @op, ' ', @order].compact.join
     end
   end
 end
